@@ -22,7 +22,7 @@ import java.util.TreeMap;
 
 public class ScoreGrayCalculation {
 
-    private static final String SAMPLES_PATH = "C:/Users/cheryl/Downloads/winnow-samples1"; // <-- use the path where you put the sample files.
+    private static final String SAMPLES_PATH = "put sample files path"; // <-- use the path where you put the sample files.
     private static final int FEATURE_LENGTH = 5; // Tokens per window.
     
     private static final double THICKNESS_THRESHOLD = 0.05; // Winnow thickness threshold.
@@ -230,19 +230,8 @@ public class ScoreGrayCalculation {
     
     public ArrayList<String> tokenize(final String document)
     {
-        // Plain: everything except whitespace and control characters.
-        //           [^\p{Z}\p{C}]+
-        // CRM114: start with a printable character; followed by any number of
-        //         alphanumeric characters + dashes, dots, commas and colons;
-        //         optionally ended by a printable character.
-        //           [^\p{Z}\p{C}][-.,:\p{L}\p{M}\p{N}]*[^\p{Z}\p{C}]?
-        // Simplified CRM114: excludes dots, commas and colons from the middle
-        //         of the pattern. With this pattern, domain names and mail addresses
-        //         will be split at dots, so the classifier can recognize a domain
-        //         even if subdomains vary.
-        //           [^\p{Z}\p{C}][-\p{L}\p{M}\p{N}]*[^\p{Z}\p{C}]?
-        
-        Pattern pattern = Pattern.compile("[\\p{Cntrl}\\p{Space}]"); // Java has it's own regex specs.
+                
+        Pattern pattern = Pattern.compile("[\\p{Cntrl}\\p{Space}]"); 
         
         ArrayList<String> tokens = new ArrayList<String>();
 
@@ -323,7 +312,7 @@ public class ScoreGrayCalculation {
     
     private class cFeature
     {
-        // A null or empty string in an mData element signifies a "skip".
+        
         private String mData[] = new String[FEATURE_LENGTH];
         
         
@@ -365,7 +354,7 @@ public class ScoreGrayCalculation {
             return this.mData[index];
         }
 
-    } // end cFeature
+    } 
     
     public static void main(String[] args) 
     {
