@@ -30,13 +30,13 @@ public class Detect {
     List<String> commonWords = new ArrayList<String>();
     
     public void init() throws Exception {
-	BufferedReader br = new BufferedReader( new FileReader( new File("C:\\Users\\cheryl\\Documents\\NetBeansProjects\\SpamDetector_v1\\src\\spamdetector_v1\\common-words.txt")));
+	BufferedReader br = new BufferedReader( new FileReader( new File("put file path for common words")));
 	String line = br.readLine();
 	while(line != null) {
             commonWords.add(line);
             line = br.readLine();
 	}
-	String spam_dataset = "C:\\Users\\cheryl\\Downloads\\dataset\\spam\\";
+	String spam_dataset = "put file path for spam dataset";
         
         File spamFolder = new File(spam_dataset);
         File[] spamList = spamFolder.listFiles();
@@ -64,7 +64,7 @@ public class Detect {
                 
                 
                 
-        String ham_dataset = "C:\\Users\\cheryl\\Downloads\\dataset\\ham\\";
+        String ham_dataset = "put file path for ham dataset";
         
         File hamFolder = new File(ham_dataset);
         File[] hamList = hamFolder.listFiles();
