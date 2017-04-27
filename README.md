@@ -24,6 +24,6 @@ Netbeans 8.0.2 to run your java project.
 # References :
 1. To calculate good and bad score : http://mnemstudio.org/ai/nn/winnow_java_ex1.txt
 2. For Naive Bayes filter : http://javatroops.blogspot.in/2012/12/adaptive-spam-filtering-algorithm.html
-3. Research paper:
-  3.1 http://iraj.in/up_proc/pdf/205-145611588020-23.pdf
-  3.2 http://ijafrse.org/Volume1/vivuti/60.pdf 
+3. Research paper:      
+3.1 http://iraj.in/up_proc/pdf/205-145611588020-23.pdf    
+3.2 http://ijafrse.org/Volume1/vivuti/60.pdf 
